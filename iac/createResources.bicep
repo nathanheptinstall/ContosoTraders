@@ -311,7 +311,7 @@ resource kv 'Microsoft.KeyVault/vaults@2022-07-01' = {
   }
 }
 
-resource userassignedmiforkvaccess 'Microsoft.ManagedIdentity/userAssignedIdentities@2022-01-31-preview' = {
+resource userassignedmiforkvaccess 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
   name: userAssignedMIForKVAccessName
   location: resourceLocation
   tags: resourceTags
@@ -322,7 +322,7 @@ resource userassignedmiforkvaccess 'Microsoft.ManagedIdentity/userAssignedIdenti
 //
 
 // cosmos db account
-resource stocksdba 'Microsoft.DocumentDB/databaseAccounts@2022-02-15-preview' = {
+resource stocksdba 'Microsoft.DocumentDB/databaseAccounts@2023-11-15' = {
   name: stocksDbAcctName
   location: resourceLocation
   tags: resourceTags
@@ -376,7 +376,7 @@ resource stocksdba 'Microsoft.DocumentDB/databaseAccounts@2022-02-15-preview' = 
 //
 
 // cosmos db account
-resource cartsdba 'Microsoft.DocumentDB/databaseAccounts@2022-02-15-preview' = {
+resource cartsdba 'Microsoft.DocumentDB/databaseAccounts@2023-11-15' = {
   name: cartsDbAcctName
   location: resourceLocation
   tags: resourceTags
@@ -430,7 +430,7 @@ resource cartsdba 'Microsoft.DocumentDB/databaseAccounts@2022-02-15-preview' = {
 //
 
 // app service plan (linux)
-resource productsapiappsvcplan 'Microsoft.Web/serverfarms@2022-03-01' = {
+resource productsapiappsvcplan 'Microsoft.Web/serverfarms@2023-01-01' = {
   name: productsApiAppSvcPlanName
   location: resourceLocation
   tags: resourceTags
@@ -444,7 +444,7 @@ resource productsapiappsvcplan 'Microsoft.Web/serverfarms@2022-03-01' = {
 }
 
 // app service
-resource productsapiappsvc 'Microsoft.Web/sites@2022-03-01' = {
+resource productsapiappsvc 'Microsoft.Web/sites@2023-01-01' = {
   name: productsApiAppSvcName
   location: resourceLocation
   tags: resourceTags
@@ -481,7 +481,7 @@ resource productsapiappsvc 'Microsoft.Web/sites@2022-03-01' = {
 //
 
 // sql azure server
-resource productsdbsrv 'Microsoft.Sql/servers@2022-05-01-preview' = {
+resource productsdbsrv 'Microsoft.Sql/servers@2021-11-01' = {
   name: productsDbServerName
   location: resourceLocation
   tags: resourceTags
@@ -527,7 +527,7 @@ resource productsdbsrv 'Microsoft.Sql/servers@2022-05-01-preview' = {
 //
 
 // sql azure server
-resource profilesdbsrv 'Microsoft.Sql/servers@2022-05-01-preview' = {
+resource profilesdbsrv 'Microsoft.Sql/servers@2021-11-01' = {
   name: profilesDbServerName
   location: resourceLocation
   tags: resourceTags
@@ -564,7 +564,7 @@ resource profilesdbsrv 'Microsoft.Sql/servers@2022-05-01-preview' = {
 //
 
 // aca environment
-resource cartsapiacaenv 'Microsoft.App/managedEnvironments@2022-06-01-preview' = {
+resource cartsapiacaenv 'Microsoft.App/managedEnvironments@2023-05-01' = {
   name: cartsApiAcaEnvName
   location: resourceLocation
   tags: resourceTags
@@ -577,7 +577,7 @@ resource cartsapiacaenv 'Microsoft.App/managedEnvironments@2022-06-01-preview' =
 }
 
 // aca
-resource cartsapiaca 'Microsoft.App/containerApps@2022-06-01-preview' = {
+resource cartsapiaca 'Microsoft.App/containerApps@2023-05-01' = {
   name: cartsApiAcaName
   location: resourceLocation
   tags: resourceTags
@@ -664,7 +664,7 @@ resource cartsapiaca 'Microsoft.App/containerApps@2022-06-01-preview' = {
 //
 
 // storage account (product images)
-resource productimagesstgacc 'Microsoft.Storage/storageAccounts@2022-05-01' = {
+resource productimagesstgacc 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   name: productImagesStgAccName
   location: resourceLocation
   tags: resourceTags
@@ -701,7 +701,7 @@ resource productimagesstgacc 'Microsoft.Storage/storageAccounts@2022-05-01' = {
 //
 
 // storage account (main website)
-resource uistgacc 'Microsoft.Storage/storageAccounts@2022-05-01' = {
+resource uistgacc 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   name: uiStgAccName
   location: resourceLocation
   tags: resourceTags
@@ -716,7 +716,7 @@ resource uistgacc 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   }
 }
 
-resource uistgacc_mi 'Microsoft.ManagedIdentity/userAssignedIdentities@2022-01-31-preview' = {
+resource uistgacc_mi 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
   name: 'DeploymentScript'
   location: resourceLocation
   tags: resourceTags
@@ -742,7 +742,7 @@ resource roleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
   }
 }
 
-resource deploymentScript 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
+resource deploymentScript 'Microsoft.Resources/deploymentScripts@2023-08-01' = {
   name: 'DeploymentScript'
   location: resourceLocation
   kind: 'AzurePowerShell'
@@ -775,7 +775,7 @@ resource deploymentScript 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
 }
 
 // storage account (new website)
-resource ui2stgacc 'Microsoft.Storage/storageAccounts@2022-05-01' = {
+resource ui2stgacc 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   name: ui2StgAccName
   location: resourceLocation
   tags: resourceTags
@@ -790,7 +790,7 @@ resource ui2stgacc 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   }
 }
 
-resource ui2stgacc_mi 'Microsoft.ManagedIdentity/userAssignedIdentities@2022-01-31-preview' = {
+resource ui2stgacc_mi 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
   name: 'DeploymentScript2'
   location: resourceLocation
   tags: resourceTags
@@ -816,7 +816,7 @@ resource roleAssignment2 'Microsoft.Authorization/roleAssignments@2022-04-01' = 
   }
 }
 
-resource deploymentScript2 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
+resource deploymentScript2 'Microsoft.Resources/deploymentScripts@2023-08-01' = {
   name: 'DeploymentScript2'
   location: resourceLocation
   kind: 'AzurePowerShell'
@@ -853,7 +853,7 @@ resource deploymentScript2 'Microsoft.Resources/deploymentScripts@2020-10-01' = 
 //
 
 // storage account (main website)
-resource imageclassifierstgacc 'Microsoft.Storage/storageAccounts@2022-05-01' = {
+resource imageclassifierstgacc 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   name: imageClassifierStgAccName
   location: resourceLocation
   tags: resourceTags
@@ -880,7 +880,7 @@ resource imageclassifierstgacc 'Microsoft.Storage/storageAccounts@2022-05-01' = 
 // cognitive services (image recognition)
 // 
 
-resource cognitiveservice 'Microsoft.CognitiveServices/accounts@2022-10-01' = {
+resource cognitiveservice 'Microsoft.CognitiveServices/accounts@2023-05-01' = {
   name: cognitiveServiceName
   location: resourceLocation
   tags: resourceTags
@@ -897,7 +897,7 @@ resource cognitiveservice 'Microsoft.CognitiveServices/accounts@2022-10-01' = {
 // cdn
 //
 
-resource cdnprofile 'Microsoft.Cdn/profiles@2022-05-01-preview' = {
+resource cdnprofile 'Microsoft.Cdn/profiles@2023-05-01' = {
   name: cdnProfileName
   location: 'global'
   tags: resourceTags
@@ -907,7 +907,7 @@ resource cdnprofile 'Microsoft.Cdn/profiles@2022-05-01-preview' = {
 }
 
 // endpoint (product images)
-resource cdnprofile_imagesendpoint 'Microsoft.Cdn/profiles/endpoints@2022-05-01-preview' = {
+resource cdnprofile_imagesendpoint 'Microsoft.Cdn/profiles/endpoints@2023-05-01' = {
   name: cdnImagesEndpointName
   location: 'global'
   tags: resourceTags
@@ -950,7 +950,7 @@ resource cdnprofile_imagesendpoint 'Microsoft.Cdn/profiles/endpoints@2022-05-01-
 }
 
 // endpoint (ui / old website)
-resource cdnprofile_uiendpoint 'Microsoft.Cdn/profiles/endpoints@2022-05-01-preview' = {
+resource cdnprofile_uiendpoint 'Microsoft.Cdn/profiles/endpoints@2023-05-01' = {
   name: cdnUiEndpointName
   location: 'global'
   tags: resourceTags
@@ -1033,7 +1033,7 @@ resource cdnprofile_uiendpoint 'Microsoft.Cdn/profiles/endpoints@2022-05-01-prev
 }
 
 // endpoint (ui / new website)
-resource cdnprofile_ui2endpoint 'Microsoft.Cdn/profiles/endpoints@2022-05-01-preview' = {
+resource cdnprofile_ui2endpoint 'Microsoft.Cdn/profiles/endpoints@2023-05-01' = {
   name: cdnUi2EndpointName
   location: 'global'
   tags: resourceTags
@@ -1147,7 +1147,7 @@ resource cdnprofile_ui2endpoint 'Microsoft.Cdn/profiles/endpoints@2022-05-01-pre
 // redis cache
 //
 
-resource rediscache 'Microsoft.Cache/redis@2022-06-01' = {
+resource rediscache 'Microsoft.Cache/redis@2023-08-01' = {
   name: redisCacheName
   location: resourceLocation
   tags: resourceTags
@@ -1164,7 +1164,7 @@ resource rediscache 'Microsoft.Cache/redis@2022-06-01' = {
 // container registry
 //
 
-resource acr 'Microsoft.ContainerRegistry/registries@2022-02-01-preview' = {
+resource acr 'Microsoft.ContainerRegistry/registries@2023-07-01' = {
   name: acrName
   location: resourceLocation
   tags: resourceTags
@@ -1199,7 +1199,7 @@ resource loadtestsvc 'Microsoft.LoadTestService/loadTests@2022-12-01' = {
 //
 
 // log analytics workspace
-resource loganalyticsworkspace 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
+resource loganalyticsworkspace 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
   name: logAnalyticsWorkspaceName
   location: resourceLocation
   tags: resourceTags
