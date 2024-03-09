@@ -568,7 +568,7 @@ resource cartsapiacaenv 'Microsoft.App/managedEnvironments@2023-05-01' = {
   name: cartsApiAcaEnvName
   location: resourceLocation
   tags: resourceTags
-  kind: 'containerapps'
+  kind: 'consumption'
   properties: {
     zoneRedundant: false
   }
