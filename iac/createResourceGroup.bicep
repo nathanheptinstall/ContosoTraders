@@ -4,7 +4,7 @@ targetScope = 'subscription'
 // parameters
 ////////////////////////////////////////////////////////////////////////////////
 
-param rgLocation string = 'eastus'
+param rgLocation string = 'uksouth'
 
 param prefixHyphenated string = 'contoso-traders'
 
