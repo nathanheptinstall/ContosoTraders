@@ -570,7 +570,6 @@ resource cartsapiacaenv 'Microsoft.App/managedEnvironments@2023-08-01-preview' =
   tags: resourceTags
   properties: {
     }
-    zoneRedundant: false
     kedaConfiguration: {}
     daprConfiguration: {}
     customDomainConfiguration: {}
