@@ -564,12 +564,27 @@ resource profilesdbsrv 'Microsoft.Sql/servers@2021-11-01' = {
 //
 
 // aca environment
-resource cartsapiacaenv 'Microsoft.App/managedEnvironments@2023-05-01' = {
+resource cartsapiacaenv 'Microsoft.App/managedEnvironments@2023-08-01-preview' = {
   name: cartsApiAcaEnvName
   location: resourceLocation
   tags: resourceTags
   properties: {
+    }
     zoneRedundant: false
+    kedaConfiguration: {}
+    daprConfiguration: {}
+    customDomainConfiguration: {}
+    workloadProfiles: [
+      {
+        workloadProfileType: 'Consumption'
+        name: 'Consumption'
+      }
+    ]
+    peerAuthentication: {
+      mtls: {
+        enabled: false
+      }
+    }
   }
 }
 
