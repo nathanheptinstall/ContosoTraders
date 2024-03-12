@@ -568,22 +568,12 @@ resource cartsapiacaenv 'Microsoft.App/managedEnvironments@2023-08-01-preview' =
   name: cartsApiAcaEnvName
   location: resourceLocation
   tags: resourceTags
-  properties: {
-    }
-    kedaConfiguration: {}
-    daprConfiguration: {}
-    customDomainConfiguration: {}
     workloadProfiles: [
       {
         workloadProfileType: 'Consumption'
         name: 'Consumption'
       }
     ]
-    peerAuthentication: {
-      mtls: {
-        enabled: false
-      }
-    }
   }
 }
 
